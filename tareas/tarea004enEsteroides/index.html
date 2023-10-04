@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Calculadora de Polígonos y Círculos</title>
+</head>
+<body>
+  <h1>Calculadora de Polígonos y Círculos</h1>
+
+  <label for="nLados">Número de Lados del Polígono:</label>
+  <input type="number" id="nLados">
+
+  <label for="longitudLado">Longitud de un Lado del Polígono:</label>
+  <input type="number" id="longitudLado">
+
+  <label for="radio">Radio del Círculo:</label>
+  <input type="number" id="radio">
+
+  <button onclick="calcular()">Calcular</button>
+
+  <h2>Resultados:</h2>
+  <p id="areaCirculo"></p>
+  <p id="perimetroCircunferencia"></p>
+  <p id="perimetroPoligono"></p>
+  <p id="areaPoligono"></p>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
