@@ -8,13 +8,14 @@ Prueba la función en la consola con tu DNI*/
 function validarDNI() {
     // Obtiene el valor del input
     const dniInput = document.getElementById('dni').value;
+    const validacionTexto = document.getElementById('validacionTexto');
 
     // Elimina espacios y convierte a mayúsculas
     const dni = dniInput.replace(/\s/g, '').toUpperCase();
     
     // Verifica que el DNI tiene 9 caracteres (8 números + 1 letra)
     if (dni.length !== 9) {
-        alert('Formato de DNI incorrecto');
+        validacionTexto.textContent='Validacion: Formato Incorrecto';
         return;
     }
 
@@ -29,12 +30,10 @@ function validarDNI() {
     const resto = parseInt(numeros) % 23;
     const letraCorrecta = letras.charAt(resto);
 
-
-    const validacionTexto = document.getElementById('validacionTexto');
     // Verifica si la letra ingresada es correcta
     if (letra === letraCorrecta) {
         validacionTexto.textContent='Validacion: DNI Correcto';
     } else {
-        validacionTexto.textContent='Validacion: DNI Correcto';
+        validacionTexto.textContent='Validacion: DNI Incorrecto';
     }
 }
