@@ -29,10 +29,12 @@ function validarDNI() {
     const resto = parseInt(numeros) % 23;
     const letraCorrecta = letras.charAt(resto);
 
+
+    const validacionTexto = document.getElementById('validacionTexto');
     // Verifica si la letra ingresada es correcta
     if (letra === letraCorrecta) {
-        alert('DNI válido');
+        validacionTexto.textContent='Validacion: DNI Correcto';
     } else {
-        alert('DNI incorrecto');
+        validacionTexto.textContent='Validacion: DNI Correcto';
     }
 }
