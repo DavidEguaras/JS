@@ -2,12 +2,15 @@
  La letra que debe corresponder a un DNI correcto se obtiene dividiendo la parte numérica entre 23 y
   cogiendo de la cadena ‘TRWAGMYFPDXBNJZSQVHLCKE’ la letra correspondiente al resto de la divisón. 
   Por ejemplo, si el resto es 0 la letra será la T y si es 4 será la G. 
-Prueba la función en la consola con tu DNI*/
 
-function validarDNI(dni) {
+  
+Prueba la función en la consola con tu DNI*/
+function validarDNI() {
+    // Obtiene el valor del input
+    const dniInput = document.getElementById('dni').value;
 
     // Elimina espacios y convierte a mayúsculas
-    dni = dni.replace(/\s/g, '').toUpperCase();
+    const dni = dniInput.replace(/\s/g, '').toUpperCase();
     
     // Verifica que el DNI tiene 9 caracteres (8 números + 1 letra)
     if (dni.length !== 9) {
@@ -33,6 +36,3 @@ function validarDNI(dni) {
         alert('DNI incorrecto');
     }
 }
-
-let dni = window.prompt("Introduce tu DNI, comprobaremos si es valido o no");
-validarDNI(dni);
