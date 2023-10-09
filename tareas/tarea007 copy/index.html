@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dibujar Figuras - David Benéitez</title>
+</head>
+
+<body>
+
+    <h1>Dibuja Figuras</h1>
+    <label>Introduce el numero de filas:  </label><input type="number" id="filas"><br>
+    <label>Introduce el caracter de las filas:  </label><input type="text" id="caracterFilas"><br>
+    <label>Introduce el caracter de relleno de la figura:  </label><input type="text" id="relleno"><br>
+    <label for="colorElegido">De que color quieres dibujarlo?:</label>
+    <input type="color" id="colorElegido" value="#000000"><br>
+
+    <button onclick="CalcularCuadradoHueco()">GenerarCuadradoHueco</button><br>
+    <p></p>
+    <button onclick="CalcularRomboHueco()">Generar Rombo Hueco</button><br>
+    <p></p>
+    <button onclick="CalcularCuadradoRelleno()">Generar Cuadrado Relleno</button><br>
+    <p></p>
+    <button onclick="CalcularRomboRelleno()">Generar Rombo Relleno</button><br>
+    <p></p>
+
+    <script src="js/index.js"></script>
+
+    <section>
+        <div id ="CuadradoHueco"></div>
+        <div id ="RomboHueco"></div>
+        <div id ="CuadradoRellenado"></div>
+        <div id ="RomboRellenado"></div>
+    </section>
+
+</body>
+
+</html>
