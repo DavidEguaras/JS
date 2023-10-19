@@ -22,7 +22,7 @@ function calcularMedia(notas){
 
             //Si no es un numero lanzamos excepcion
             if(isNaN(notas[i])){
-                throw "una de las notas no es un numero";
+                throw "una de las notas no es un numero";    
             
             //Si es un numero lo agregamos al total
             }else{
@@ -37,7 +37,7 @@ function calcularMedia(notas){
 
 
 try {
-    console.log("media : ",calcularMedia([j,8,9,2]));
+console.log("media : ",calcularMedia([j,8,9,2]));
 } catch (error) {
     console.log(error);
 }
