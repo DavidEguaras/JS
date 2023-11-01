@@ -1,11 +1,14 @@
 export class Persona {
-    static contadorPersonas = 100;
-  
+    static get MAXIMO_AFORO(){
+      return 106; 
+    }
     constructor(nombre, apellidos, edad) {
-      this._id = ++Persona.contadorPersonas;
-      this._nombre = nombre;
-      this._apellidos = apellidos;
-      this._edad = edad;
+      if (Persona.MAXIMO_AFORO <= contadorPersonas){
+        this._id = ++Persona.contadorPersonas;
+        this._nombre = nombre;
+        this._apellidos = apellidos;
+        this._edad = edad;
+      }
     }
   
     get id() {
@@ -26,7 +29,6 @@ export class Persona {
     get apellidos() {
       return this._apellidos;
     }
-  
     set apellidos(apellidos) {
       this._apellidos = apellidos;
     }
