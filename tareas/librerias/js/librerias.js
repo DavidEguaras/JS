@@ -1,13 +1,13 @@
-function doble(num){
-    return 2*num;
+function doble(num) {
+    return 2 * num;
 }
 
-function triple(num){
-    return 3*num;
+function triple(num) {
+    return 3 * num;
 }
 
 export const funcionesMatematicas = {
-    doble, 
+    doble,
     triple,
 }
 
