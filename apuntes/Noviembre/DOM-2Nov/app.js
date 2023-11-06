@@ -37,7 +37,6 @@ console.log(inputs);
 const inputsQuery = document.querySelectorAll('input');
 console.log(inputsQuery);
 
-
 // Forma 1
 const inputsWithSexoName = document.querySelectorAll('input[name="sexo"]');
 console.log(inputsWithSexoName);
