@@ -12,6 +12,7 @@ let arrayCollection = Array.from(collection);
 
 //imprimimos en consola el array de elementos, para comprobar su contenido
 console.log(collection);
+console.log(arrayCollection);
 
 
 //-------------------
