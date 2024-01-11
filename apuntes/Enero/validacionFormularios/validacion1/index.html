@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="es"> <head>   
+<meta charset="UTF-8">     
+<meta name="viewport" content="width=device-width, initial-scale=1.0">     
+<title>Formulario con Validación</title>     
+<style>       
+    input:invalid {         
+        border: 2px dashed red;       
+    }        
+    input:valid {
+        border: 2px solid greenyellow;       
+        }     
+    
+</style> 
+</head> 
+<body>     
+    <h2>Formulario de Validación</h2>      
+    <form id="myForm">         
+        <label for="nombre">Nombre:</label>         
+        <input type="text" id="nombre" name="nombre" >          
+        <br>          
+        <label for="apellidos">Apellidos:</label>         
+        <input type="text" id="apellidos" name="apellidos"  required="true">          
+        <br>          
+        <label for="email">Correo electrónico:</label>         
+        <input type="email" id="email" name="email">         
+        <br>          
+        <input type="submit" value="Enviar">     
+    </form> 
+    <script>
+        const nombre = document.getElementById('nombre').value;
+        const email1 = document.getElementById('email').value;
+        const email2 = myForm.email;
+        console.log(email1);
+        console.log(email2);
+        function comprobarEmail(){
+            if (!this.checkValidity()){
+                console.log("FALLO");
+                this.setCustomValidity("Mensaje de Error");
+            }else{
+                this.setCustomValidity("");
+            }
+        }
+        email1.addEventListener('input')
+    </script>    
+</body> 
+</html> 

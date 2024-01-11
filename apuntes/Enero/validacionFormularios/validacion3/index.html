@@ -1,0 +1,57 @@
+
+<!DOCTYPE html> <html lang="es"> 
+    <head>     <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>Formulario con Validación 3</title>     
+    <style>         
+        .error {             
+            color: red;         
+        }     
+    </style> 
+    </head> 
+    <body>      
+        <h2>Formulario de Validación 3 </h2>      
+        <form id="myForm" onsubmit="return validarFormulario()">         
+            <label for="nombre">Nombre:</label>         
+            <input type="text" id="nombre" name="nombre">        
+            <span id="errorNombre" class="error"></span>         
+            <br>         
+            <label for="apellidos">Apellidos:</label>         
+            <input type="text" id="apellidos" name="apellidos"  required="true">          
+            <br>          
+            <label for="email">Correo electrónico:</label>         
+            <input type="email" id="email" name="email">         
+            <span id="errorEmail" class="error"></span>         
+            <br>          
+            <input type="submit" value="Enviar">     
+        </form>      
+
+        <script>     
+
+        function validarFormulario() {             
+            var nombre = document.getElementById("nombre").value;             
+            var email = document.getElementById("email").value;              
+            // Validación del campo de nombre             
+            if (nombre === "") {                 
+                document.getElementById("errorNombre").innerHTML = "Por favor, ingresa tu nombre.";                 
+                return false;
+            } 
+            else {                 
+                document.getElementById("errorNombre").innerHTML = "";             
+            }              
+            // Validación del campo de correo electrónico             
+            if (email === "") {
+                document.getElementById("errorEmail").innerHTML = "Por favor, ingresa tu correo electrónico.";                 
+                return false;             
+            } else {                 
+                document.getElementById("errorEmail").innerHTML = "";             
+            }              
+            // Otras validaciones pueden agregarse según sea necesario      
+
+
+            return true; // Envía el formulario si todas las validaciones son exitosas         
+        }  
+          
+        </script>  
+    </body> 
+</html> 
