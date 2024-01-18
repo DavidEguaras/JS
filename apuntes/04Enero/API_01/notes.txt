@@ -5,3 +5,4 @@ Pasos necesarios
     -npm install mysql
     -npm i nodemon --save-dev
     -npm run start
+    -node .\app.js (para iniciar la aplicacion)
