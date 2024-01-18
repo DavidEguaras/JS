@@ -1,6 +1,6 @@
 const db = require('../databases/db.js');
 
-const getCiudades = (req, res) => {a
+const getCiudades = (req, res) => {
     db.query('SELECT * FROM ciudades', (err, resultados)  => {
         if(err){
             console.error('Error al obtener datos desde la base de datos: ', err);
