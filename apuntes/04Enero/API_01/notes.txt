@@ -1,8 +1,0 @@
-Pasos necesarios
-    -Instalar node.js
-    -Comando: npm init -y (en la carpeta)
-    -npm install express
-    -npm install mysql
-    -npm i nodemon --save-dev
-    -npm run start
-    -node .\app.js (para iniciar la aplicacion)
