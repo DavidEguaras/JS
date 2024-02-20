@@ -53,7 +53,7 @@ function pressed(){
 }
 
 
-/* Esta funcion, hace lo que pedias pero no esta programada como querias
+/* Esta funcion hace lo que pedias, pero no esta programada como querias
 function pressed (){
     tableArray.forEach(table => {
         if (table.classList.contains('ancha')){
