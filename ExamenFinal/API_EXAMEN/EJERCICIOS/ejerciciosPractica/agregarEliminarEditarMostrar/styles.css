@@ -1,0 +1,42 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input, button {
+    margin: 5px;
+    padding: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para ocultar el formulario de modificación */
+#modificar-form {
+    display: none;
+}

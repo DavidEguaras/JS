@@ -1,0 +1,35 @@
+1. Crear una clase para generar elementos HTML del DOM de tal forma que:
+a) Para crear un elemento solo se necesite indicar el tag del elemento.
+b) Se genere automáticamente el valor para el atributo id, de manera que ese valor sea “nombre_del_tag_”
++ número_correlativo_para_cada_tag . Ejemplos de valores para id:
+• H1_003 (tercer párrafo)
+• P_001 (primer párrafo)
+• INPUT_007 (séptimo input)
+Sugerencia: contar los elementos con ese tag que ya hay en el DOM
+c) El atributo id será un atributo de la clase y un atributo del elemento HTML
+d) Los objetos de esta clase podrán almacenar su “innerHTML”,
+su “innerText” y todos los nombres de las propiedades que se hayan establecido
+en cada elemento para el atributo “style”.
+e) Además de los métodos que consideres necesarios, habrá método para:
+• Agregar el elemento HTML como primer elemento hijo de otro elemento
+• Agregar el elemento HTML como último elemento hijo de otro elemento
+• Agregar como último elemento del body
+• Establecer nueva propiedad del atributo style para un elemento existente en el DOM
+
+
+
+2. Crear una clase para trabajar con elementos de tipo texto (P, LI, H1, H2 …) que herede de la anterior y aporte
+como funcionalidad el facilitar el cambio de color de texto.
+
+
+3. Crear una clase para trabajar con elementos con tag “button” que herede de la primera clase y aporte la
+funcionalidad que consideres oportuna.
+
+
+4. Utilizando el fichero index.html adjunto, que no podrás modificar, y con las clases anteriores, se pide:
+a) Crear un botón (tag button) al inicio de body que:
+• Ocupe todo el ancho de la ventana. (Sugerencia: establece en style la propiedad width: 100%)
+• Al pasar el ratón por encima: que cambie el color de los elementos H1, volviendo al color original
+al salir.
+• Al hacer clic en este botón que cambie el color de los elementos H2 y se mantenga cambiado. Si
+se vuelve a hacer clic, que vuelvan al color original.

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario sencillo</h1>
+    <h2>Escribe aquí debajo el nombre recogido en el formulario:</h2>
+    <div id="lugar"></div>
+    <h2 id="resul"></h2>
+    <script>
+        function enviar() {
+            // Captura el valor del nombre ingresado por el usuario
+            const nombre = document.getElementById('nombreInput').value;
+            
+            // Muestra el nombre en el elemento con id 'resul'
+            document.getElementById('resul').innerText = "Nombre recogido: " + nombre;
+        }
+
+        function pedirNombre(lugar) {
+            const form1 = document.createElement('form');
+            const inputNombre = document.createElement('input');
+            inputNombre.setAttribute('type', 'text');
+            inputNombre.setAttribute('placeholder', 'Escribe tu nombre');
+            inputNombre.setAttribute('id', 'nombreInput'); // Añadido un id al input
+            const boton = document.createElement('button');
+            boton.innerText = 'Enviar';
+            boton.setAttribute('type', 'button'); // Evita que el formulario se envíe automáticamente
+            boton.addEventListener('click', enviar);
+            form1.appendChild(inputNombre);
+            form1.appendChild(boton);
+            lugar.appendChild(form1);
+        }
+
+        // Llama a la función pedirNombre para crear el formulario
+        pedirNombre(document.getElementById('lugar'));
+    </script>
+</body>
+</html>

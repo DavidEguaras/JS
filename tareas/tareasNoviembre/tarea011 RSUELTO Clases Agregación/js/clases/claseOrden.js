@@ -29,7 +29,7 @@ export class Orden{
     }
 
     get id() {
-        return this._id.toLocaleString(undefined,
+        return this.tag.toLocaleString(undefined,
             { minimumIntegerDigits: 3, useGrouping: false}); //dejo useGrouping para recordar la propiedad
     }
     toString(){
