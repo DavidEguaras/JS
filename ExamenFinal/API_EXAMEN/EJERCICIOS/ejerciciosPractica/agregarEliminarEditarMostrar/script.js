@@ -8,6 +8,9 @@
 // Incluir un formulario separado con campos para agregar un nuevo registro a la base de datos.
 // Al enviar el formulario de agregar, enviar los datos al servidor para agregar el nuevo registro y actualizar la tabla con los nuevos datos, mostrando la nueva ciudad agregada.
 // Función para cargar las ciudades al cargar la página
+
+
+
 window.onload = function() {
     cargarCiudades();
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Alumnos</title> <!-- Cambio de título -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Administrador de Alumnos</h1> <!-- Cambio de título -->
+
+    <!-- Formulario para agregar un nuevo alumno -->
+    <form id="formularioAgregar">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="edad">Edad:</label> <!-- Cambio de habitantes a edad -->
+        <input type="number" id="edad" name="edad" required> <!-- Cambio de habitantes a edad -->
+        <button type="submit">Agregar Alumno</button> <!-- Cambio de texto en el botón -->
+    </form>
+
+    <hr>
+
+    <!-- Tabla para mostrar los alumnos -->
+    <table id="tablaAlumnos"> <!-- Cambio de id de tabla -->
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Edad</th> <!-- Cambio de habitantes a edad -->
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se llenarán los datos de la tabla con JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

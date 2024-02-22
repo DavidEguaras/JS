@@ -1,0 +1,36 @@
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para el formulario de edición */
+#formularioEdicion {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+#formularioEdicion label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#formularioEdicion input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#formularioEdicion button {
+    margin-top: 10px;
+    cursor: pointer;
+}
