@@ -1,0 +1,20 @@
+#gameArea {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.snake-segment {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    position: absolute;
+}
+
+#food {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+}
