@@ -37,8 +37,6 @@ function gameLoop() {
     }
 
     if (snake.checkCollisionWall() || snake.checkCollisionBody()) {
-        alert("Game Over!");
-        restartGame(); //Reiniciar el juego en caso de colisión
     }
 
     snake.drawSnake(gameArea);

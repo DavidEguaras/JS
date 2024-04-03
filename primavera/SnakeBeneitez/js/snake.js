@@ -8,7 +8,15 @@ export class Snake {
         this.direction = direction;
     }
 
+    checkEat(food) {
+        return this.head.x === food.x && this.head.y === food.y;
+    }
     
+    grow() {
+        const lastPart = this.bodyParts[this.bodyParts.length - 1];
+        this.bodyParts.push({ x: lastPart.x, y: lastPart.y });
+    }
+
     move() {
         let newX = this.head.x;
         let newY = this.head.y;
@@ -33,37 +41,17 @@ export class Snake {
             this.bodyParts[i].x = this.bodyParts[i - 1].x;
             this.bodyParts[i].y = this.bodyParts[i - 1].y;
         }
-
-        this.head.x = newX;
-        this.head.y = newY;
-    }
-
+        
     
-    checkEat(food) {
-        return this.head.x === food.x && this.head.y === food.y;
+
     }
 
-    grow() {
-        const lastPart = this.bodyParts[this.bodyParts.length - 1];
-        this.bodyParts.push({ x: lastPart.x, y: lastPart.y });
-    }
-    
     checkCollisionWall() {
         if (this.head.x < 0 || this.head.x >= 400 || this.head.y < 0 || this.head.y >= 400) {
             return true;
         } else {
             return false;
         }
-    }
-    
-    checkCollisionBody() {
-        //Corregi esto, empezaba a iterar por el 0 lo que provocaba que al crecer con la comida colisionara
-        for (let i = 1; i < this.bodyParts.length; i++) {
-            if (this.head.x === this.bodyParts[i].x && this.head.y === this.bodyParts[i].y) {
-                return true;
-            }
-        }
-        return false;
     }
 
 
