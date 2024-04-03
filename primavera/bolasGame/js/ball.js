@@ -7,7 +7,7 @@ export class Ball{
         this.y = Math.floor(Math.random() * document.getElementById("gameArea").offsetHeight);;
         this.vx = Math.random() * 20;
         this.vy = Math.random() * 20;
-        this.color = colors[Math.floor(Math.random() * colors.lenght)];
+        this.color = colors[Math.floor(Math.random() * colors.length)];
     }
 
     draw(){
@@ -22,22 +22,18 @@ export class Ball{
     }
 
     move(){
-        let newX = 0;
-        let newY = 0;
-        if(this.vx > 0){
-            newX =+ this.vx;
-        }else{
-            newX =- this.vx;
-        }
+        
+            this.x += this.vx;
 
-        if(this.vy > 0){
-            newY =+ this.vy;
-        }else{
-            newY =- this.vy;
-        }
+            this.y += this.vy;
     }
 
-    checkCollision(){
-
+    checkCollisionWalls(){
+        if(this.x <= 0 || this.x >= document.getElementById("gameArea").offsetWidth - 50){
+            this.vx =- this.vx;
+        }
+        if(this.y <= 0 || this.x >= document.getElementById("gameArea").offsetHeight - 50){
+            this.vy =- this.vy;
+        }
     }
 }
