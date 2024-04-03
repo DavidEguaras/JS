@@ -8,15 +8,7 @@ export class Snake {
         this.direction = direction;
     }
 
-    checkEat(food) {
-        return this.head.x === food.x && this.head.y === food.y;
-    }
     
-    grow() {
-        const lastPart = this.bodyParts[this.bodyParts.length - 1];
-        this.bodyParts.push({ x: lastPart.x, y: lastPart.y });
-    }
-
     move() {
         let newX = this.head.x;
         let newY = this.head.y;
@@ -35,17 +27,25 @@ export class Snake {
                 newX += this.speed;
                 break;
         }
-        this.head.x = newX;
-        this.head.y = newY;
 
         //Muevo todo el cuerpo menos la cabeza, que la mueven los input
         for (let i = 1; i < this.bodyParts.length; i++) {
             this.bodyParts[i].x = this.bodyParts[i - 1].x;
             this.bodyParts[i].y = this.bodyParts[i - 1].y;
         }
-        
-    
 
+        this.head.x = newX;
+        this.head.y = newY;
+    }
+
+    
+    checkEat(food) {
+        return this.head.x === food.x && this.head.y === food.y;
+    }
+
+    grow() {
+        const lastPart = this.bodyParts[this.bodyParts.length - 1];
+        this.bodyParts.push({ x: lastPart.x, y: lastPart.y });
     }
     
     checkCollisionWall() {
@@ -73,7 +73,7 @@ export class Snake {
             const snakeSegment = document.createElement('div');
             snakeSegment.style.width = '20px';
             snakeSegment.style.height = '20px';
-            snakeSegment.style.backgroundColor = 'green';
+            snakeSegment.style.backgroundColor = 'aqua';
             snakeSegment.style.position = 'absolute';
             snakeSegment.style.left = `${part.x}px`;
             snakeSegment.style.top = `${part.y}px`;

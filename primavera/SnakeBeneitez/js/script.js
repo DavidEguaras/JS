@@ -47,4 +47,5 @@ function gameLoop() {
     setTimeout(gameLoop, 100);
 }
 
+//EJECUTO EL JUEGO
 gameLoop();

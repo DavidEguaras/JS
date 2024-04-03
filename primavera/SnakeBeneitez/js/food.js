@@ -2,7 +2,7 @@ export class Food {
     constructor() {
         this.x = 0;
         this.y = 0;
-        this.color = "red"; 
+        this.color = "yellow"; 
     }
 
     //Esto se lo tuve que preguntar a chatgpt porque no tenia ni idea de porque no se me generaba bien
