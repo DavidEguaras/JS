@@ -136,7 +136,7 @@ function dibujar() {
         if (fila === 0 || fila === numeroFilas - 1) {
             //tantos como la altura del cuadrado
             for (let caracterLineasIndex = 0; caracterLineasIndex < numeroFilas; caracterLineasIndex++) {
-                contenidoLinea += caracterLineas + '&nbsp;&nbsp;&nbsp;&nbsp;';
+                contenidoLinea += caracterLineas + '&nbsp;';
             }
         //Si no, comprobamos si es el primer o ultimo caracter de la linea, si lo es lo ponemos, sino rellenamos
         } else {
@@ -144,11 +144,11 @@ function dibujar() {
                 if (caracterRellenoIndex === 0 || caracterRellenoIndex === numeroFilas - 1) {
                     contenidoLinea += caracterLineas;
                 } else {
-                    contenidoLinea += '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+                    contenidoLinea += '&nbsp;&nbsp;';
                 }
             }
         }
-        cuadradoHuecoCaja.innerHTML += contenidoLinea + '<br>';
+        cuadradoHuecoCaja.innerHTML += contenidoLinea + '</br>';
     }
     cuadradoHuecoCaja.style.color = color;
 
