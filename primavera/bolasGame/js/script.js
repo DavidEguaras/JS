@@ -36,7 +36,7 @@ function checkCollisionBalls() {
             }
         }
     }
-} 
+}
 createBalls();
 createBalls();
 moveBalls();
