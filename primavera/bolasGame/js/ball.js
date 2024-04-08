@@ -1,39 +1,36 @@
+export class Ball {
+    static colors = ['red', 'blue', 'green'];
+    constructor() {
+        this.gameArea = document.getElementById("gameArea");
+        this.x = Math.floor(Math.random() * this.gameArea.offsetWidth - 20);
+        this.y = Math.floor(Math.random() * this.gameArea.offsetHeight - 20);
+        this.vx = Math.random() * 6 - 5;
+        this.vy = Math.random() * 6 - 5;
+        this.color = Ball.colors[Math.floor(Math.random() * Ball.colors.length)];
+        this.radius = Math.floor(Math.random() * (30 - 5 )) + 10;
 
-
-export class Ball{
-    static colors = [red, blue, green];
-    constructor(){
-        this.x = Math.floor(Math.random() * document.getElementById("gameArea").offsetWidth);
-        this.y = Math.floor(Math.random() * document.getElementById("gameArea").offsetHeight);;
-        this.vx = Math.random() * 20;
-        this.vy = Math.random() * 20;
-        this.color = colors[Math.floor(Math.random() * colors.length)];
+        this.element = document.createElement('div');
+        this.element.classList.add('ball');
+        this.element.style.width = this.radius * 2 + 'px';
+        this.element.style.height = this.radius * 2 + 'px';
+        this.element.style.backgroundColor = this.color;
+        this.gameArea.appendChild(this.element);
     }
 
-    draw(){
-        const ball = document.createElement('div');
-        ball.classList.add("ball");
-        ball.style.backgroundColor = this.color;
-        ball.style.left = `${this.x}px`; 
-        ball.style.top = `${this.y}px`; 
-
-        const gameArea = document.getElementById("gameArea");
-        gameArea.appendChild(ball)
-    }
-
-    move(){
+    move() {
+        this.x += this.vx;
+        this.y += this.vy;
         
-            this.x += this.vx;
-
-            this.y += this.vy;
-    }
-
-    checkCollisionWalls(){
-        if(this.x <= 0 || this.x >= document.getElementById("gameArea").offsetWidth - 50){
-            this.vx =- this.vx;
+        //Compruebo las colisiones dentro del movimiento
+        if (this.x <= 0 || this.x >= this.gameArea.offsetWidth - this.radius * 2) {
+            this.vx *= -1;
         }
-        if(this.y <= 0 || this.x >= document.getElementById("gameArea").offsetHeight - 50){
-            this.vy =- this.vy;
+        if (this.y <= 0 || this.y >= this.gameArea.offsetHeight - this.radius * 2) {
+            this.vy *= -1;
         }
+
+        //cambiamos la posicion en el gameArea desde la propia funcion
+        this.element.style.left = this.x + 'px';
+        this.element.style.top = this.y + 'px';
     }
 }
