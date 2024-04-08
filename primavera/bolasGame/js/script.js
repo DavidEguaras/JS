@@ -4,7 +4,7 @@ document.getElementById('ballCreatorButton').addEventListener("click", createBal
 
 const balls = [];
 
- function createBalls() {
+function createBalls() {
     balls.push(new Ball());
 }
 
