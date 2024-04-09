@@ -19,12 +19,4 @@ export class Juego{
 
     }
 
-    jugador1PedirCarta(){
-
-    }
-
-    jugador1Plantarse(){
-
-    }
-
 }

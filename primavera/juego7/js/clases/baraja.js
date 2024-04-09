@@ -9,7 +9,7 @@ export class Baraja{
         this.cartas = Baraja.palos.flatMap(function(palo){
             return Baraja.numeros.map(function(numero, index){
                 if(index > 6){
-                    return new Carta(numero, palo, 0.5)
+                    return new Carta(numero, palo, 0.5);
                 }else{
                     return new Carta(numero, palo, index + 1);
                 }
@@ -22,6 +22,8 @@ export class Baraja{
     }
 
     sacarCarta(){
-    
+        return this.cartas.shift();
     }
 }
+
+
